@@ -7,7 +7,7 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 
 
 ## Installation
-1. Télecharger le plugin : https://github.com/loicsmith/ATM-HACK/releases/tag/ADMINTOOLS
+1. Télecharger le plugin : https://github.com/loicsmith/AdminTools/releases/tag/AdminTools
 2. Placer le dans votre dossier plugins de votre serveur
 3. Démarrer votre serveur
 
@@ -38,4 +38,35 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 ² (touche "quote" au dessus de tab) : se mettre en service admin
 
 ## détails des niveaux administrateurs par commande
+
+/as : niveau 1 et +
+
+/admin : niveau 1 et +
+
+Menu administratif :
+
+- Prendre/finir son service : niveau 1 et +
+- Rejoindre une entreprise : niveau 1 et +
+- Définir numéro de téléphone : niveau 1 et +
+- Soigner la personne proche : niveau 1 et +
+- Nourrir/Hydrater la personne proche : niveau 1 et +
+- Nourrir/Hydrater la personne proche pour l'éternité : niveau 1 et +
+- Donner permis (personne proche) : niveau 1 et +
+- Donner point permis (personne proche) : Niveau 1 et +
+- Définir prénom RP d'un joueur (personne proche) : niveau 1 et + 
+- Définir Nom de famille RP (personne proche) : niveau 1 et +
+- 
+
+
+
+
+
+
+- Définir nouveau propriétaire : niveau 8 et +
+- Donner un rang administrateur : niveau 9 et +
+- Définir un mot de passe administrateur : niveau 9 et + 
+- Donner level (personne proche) : niveau 10
+- Donner experience : niveau 10
+
+
 
