@@ -57,8 +57,8 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 
 ##### Catégorie Admin :
 
-- Donner un rang administrateur : niveau 9 et +
-- Définir un mot de passe administrateur : niveau 9 et + 
+- Donner un rang administrateur : niveau 10
+- Définir un mot de passe administrateur : niveau 10 
 - Donner level (personne proche) : niveau 10
 - Donner experience : niveau 10
  
