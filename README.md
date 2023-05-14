@@ -28,6 +28,10 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 - possibilité de changer propriétaire/prix de location/prix du terrain
 - possibilité de déplacer/ranger/réparer/refuel un véhicule
 
+## Notes
+
+Sur toutes les commandes marquées comme "personne proche", si il n'y a personne à proximiter, vous serez considéré comme la personne la plus proche donc la commande fonctionnera sur vous.
+
 ## Commandes
 
 /as : se mettre en service admin
