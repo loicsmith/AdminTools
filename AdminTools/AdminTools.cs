@@ -213,7 +213,7 @@ namespace AdminTools
                                    {
                                        player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " est désormais dans l'entreprise ayant pour ID " + num + "</color>");
                                        closestPlayer.SendText("<color=green>Vous êtes désormais dans l'entreprise ayant pour ID " + num + "</color>");
-                                       player.character.BizId = num;
+                                       closestPlayer.character.BizId = num;
                                    }
                                    player.ClosePanel(ui2);
 
