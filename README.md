@@ -48,12 +48,12 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 ##### Catégorie globale :
 
 - Prendre/finir son service : niveau 1 et +
-- Rejoindre une entreprise : niveau 1 et +
-- Définir numéro de téléphone : niveau 1 et +
-- Donner permis (personne proche) : niveau 1 et +
-- Donner point permis (personne proche) : Niveau 1 et +
-- Définir prénom RP d'un joueur (personne proche) : niveau 1 et + 
-- Définir Nom de famille RP (personne proche) : niveau 1 et +
+- Rejoindre une entreprise (personne proche) : niveau 1 et +
+- Définir numéro de téléphone : niveau 5 et +
+- Donner permis (personne proche) : niveau 5 et +
+- Donner point permis (personne proche) : Niveau 5 et +
+- Définir prénom RP d'un joueur (personne proche) : niveau 5 et + 
+- Définir Nom de famille RP (personne proche) : niveau 5 et +
 
 ##### Catégorie Admin :
 
@@ -66,7 +66,7 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 
 - Soigner la personne proche : niveau 1 et +
 - Nourrir/Hydrater la personne proche : niveau 1 et +
-- Nourrir/Hydrater la personne proche pour l'éternité : niveau 1 et +
+- Nourrir/Hydrater la personne proche pour l'éternité : niveau 8 et +
 
 ##### Catégorie terrains :
 
