@@ -1,4 +1,4 @@
-﻿using Life;
+using Life;
 using Life.BizSystem;
 using Life.DB;
 using Life.Network;
@@ -263,6 +263,9 @@ namespace AdminTools
                 {
                     player.ShowPanelUI(new UIPanel("Définir le numéro de téléphone de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Numéro de téléphone...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
+                        if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+
+
                         string num = ui2.inputText;
                         if (closestPlayer == null)
                         {
@@ -398,6 +401,9 @@ namespace AdminTools
 
                     });
                     soinsmenu.AddTabLine("Nourrir/hydrater pour l'éternité la personne proche", (ui) => {
+                        if (player.account.adminLevel >= 8) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+
+
                         if (closestPlayer != null)
                         {
                             closestPlayer.character.Hunger = 9999;
@@ -420,6 +426,8 @@ namespace AdminTools
                 globalmenu.AddTabLine("Donner point permis", (ui) => {
                     player.ShowPanelUI(new UIPanel("Définir les points du permis : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nombre de points...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
+                        if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+
                         if (closestPlayer != null)
                         {
                             closestPlayer.character.PermisPoints = int.Parse(ui2.inputText);
@@ -439,6 +447,7 @@ namespace AdminTools
                 });
 
                 globalmenu.AddTabLine("Donner permis", (ui) => {
+                    if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
                     if (closestPlayer != null)
                     {
@@ -459,6 +468,8 @@ namespace AdminTools
                     {
                         player.ShowPanelUI(new UIPanel("Définir le prénom RP de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Prénom RP...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
+                            if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+
                             string num = ui2.inputText;
                             if (closestPlayer == null)
                             {
@@ -482,6 +493,8 @@ namespace AdminTools
                     {
                         player.ShowPanelUI(new UIPanel("Définir le nom de famille RP de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nom de famille RP...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
+                            if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+
                             string num = ui2.inputText;
                             if (closestPlayer == null)
                             {
