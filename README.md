@@ -1,13 +1,13 @@
 
-# PLUGIN ATM-HACK
+# PLUGIN ADMIN TOOLS
 
-Plugin de braquage d'atm sur le jeu Nova-Life : Amboise
+Plugin de d'administration sur le jeu Nova-Life : Amboise
 
 
 
 
 ## Installation
-1. Télecharger le plugin : https://github.com/loicsmith/ATM-HACK/releases/tag/ATM-HACK
+1. Télecharger le plugin : https://github.com/loicsmith/ATM-HACK/releases/tag/ADMINTOOLS
 2. Placer le dans votre dossier plugins de votre serveur
 3. Démarrer votre serveur
 
@@ -16,14 +16,26 @@ Plugin de braquage d'atm sur le jeu Nova-Life : Amboise
 
 ## Fonctionalités
 
-- Braquage d'atm
-- Configurable (argent, temps avant chaque braquage, durée du braquage)
-- Menu pour rénitialiser le temps avant chaque braquage, et pour recharger le fichier de configuration sans redémarré le serveur !
-- Système de logs par webhook discord ! (Pour l'installation, un fichier json apparaitra directement dans le dossier plugins > logs)
+- Commandes administratives par level admin (voir prochaine catégorie)
+- possibilité de changer de prénom / Nom de famille RP
+- possibilité de changer de numéro
+- possibilité de se téléporter à un terrain
+- Service admin complet (quand on passe en service admin, nous devenons invincible)
+- possibilité de définir un level admin / mot de passe admin
+- possibilité de soigner/hydrater/nourrir la personne proche
+- possibilité de donner des points sur le permis ainsi que de donner le permis
+- possibilité de donner des levels / expériences
+- possibilité de changer propriétaire/prix de location/prix du terrain
+- possibilité de déplacer/ranger/réparer/refuel un véhicule
 
-## Notes
-
-- pour la configuration du min / max argent obtensible, veuillez diviser par la durée du braquage, le min/max est l'argent gagné par seconde !
 ## Commandes
 
-/atm : permet d'afficher le menu permettant de rénitialiser le cooldown après braquage, de recharger le fichier de configuration (si modification de celui, pas besoin de redémarrer le serveur) et de se donner 1x ATM (posable)  
+/as : se mettre en service admin
+/admin : ouvre le menu administratif
+
+## Touches
+
+² (touche "quote" au dessus de tab) : se mettre en service admin
+
+## détails des niveaux administrateurs par commande
+
