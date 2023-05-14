@@ -45,28 +45,41 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 
 Menu administratif :
 
+Catégorie globale :
+
 - Prendre/finir son service : niveau 1 et +
 - Rejoindre une entreprise : niveau 1 et +
 - Définir numéro de téléphone : niveau 1 et +
-- Soigner la personne proche : niveau 1 et +
-- Nourrir/Hydrater la personne proche : niveau 1 et +
-- Nourrir/Hydrater la personne proche pour l'éternité : niveau 1 et +
 - Donner permis (personne proche) : niveau 1 et +
 - Donner point permis (personne proche) : Niveau 1 et +
 - Définir prénom RP d'un joueur (personne proche) : niveau 1 et + 
 - Définir Nom de famille RP (personne proche) : niveau 1 et +
-- 
 
+Catégorie Admin :
 
-
-
-
-
-- Définir nouveau propriétaire : niveau 8 et +
 - Donner un rang administrateur : niveau 9 et +
 - Définir un mot de passe administrateur : niveau 9 et + 
 - Donner level (personne proche) : niveau 10
 - Donner experience : niveau 10
+- 
+Catégorie de soins :
+- Soigner la personne proche : niveau 1 et +
+- Nourrir/Hydrater la personne proche : niveau 1 et +
+- Nourrir/Hydrater la personne proche pour l'éternité : niveau 1 et +
 
+Catégorie terrains :
 
+- Définir nouveau propriétaire : niveau 8 et +
+- Définir prix de vente : Niveau 8 et +
+- définir prix de location : Niveau 8 et +
 
+Catégorie terrains spawn :
+
+téléportation terrain : niveau 1 et +
+
+Catégorie véhicule :
+
+- Avancer/Reculer/droite/gauche/retourner le vehicule : niveau 1 et +
+- Réparer le véhicule : niveau 1 et +
+- Refuell le véhicule : niveau 1 et +
+- Ranger le véhicule : niveau 1 et + 
