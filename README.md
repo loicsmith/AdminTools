@@ -7,8 +7,6 @@ Plugin de d'administration sur le jeu Nova-Life : Amboise
 
 En cas de problème/questions, vous pouvez me contactez sur discord : loicsmith (ou Loicsmith#0275)
 
-# Note
-Ce plugin ne sera plus mis à jour.
 
 ## Installation
 1. Télecharger le plugin (le .dll) : https://github.com/loicsmith/AdminTools/releases/tag/AdminTools
