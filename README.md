@@ -55,30 +55,30 @@ Sur toutes les commandes marquées comme "personne proche", si il n'y a personne
 
 - Prendre/finir son service : niveau 1 et +
 - Rejoindre une entreprise (personne proche) : niveau 1 et +
-- Définir numéro de téléphone : niveau 5 et +
-- Donner permis (personne proche) : niveau 5 et +
-- Donner point permis (personne proche) : Niveau 5 et +
-- Définir prénom RP d'un joueur (personne proche) : niveau 5 et + 
-- Définir Nom de famille RP (personne proche) : niveau 5 et +
+- Définir numéro de téléphone : niveau 1 et +
+- Donner permis (personne proche) : niveau 3 et +
+- Donner point permis (personne proche) : Niveau 3 et +
+- Définir prénom RP d'un joueur (personne proche) : niveau 3 et + 
+- Définir Nom de famille RP (personne proche) : niveau 3 et +
 
 ##### Catégorie Admin :
 
-- Donner un rang administrateur : niveau 10
-- Définir un mot de passe administrateur : niveau 10 
-- Donner level (personne proche) : niveau 10
-- Donner experience : niveau 10
+- Donner un rang administrateur : niveau 5
+- Définir un mot de passe administrateur : niveau 5
+- Donner level (personne proche) : niveau 5
+- Donner experience : niveau 5
  
 ##### Catégorie de soins :
 
 - Soigner la personne proche : niveau 1 et +
 - Nourrir/Hydrater la personne proche : niveau 1 et +
-- Nourrir/Hydrater la personne proche pour l'éternité : niveau 8 et +
+- Nourrir/Hydrater la personne proche pour l'éternité : niveau 4 et +
 
 ##### Catégorie terrains :
 
-- Définir nouveau propriétaire : niveau 8 et +
-- Définir prix de vente : Niveau 8 et +
-- définir prix de location : Niveau 8 et +
+- Définir nouveau propriétaire : niveau 3 et +
+- Définir prix de vente : Niveau 3 et +
+- définir prix de location : Niveau 3 et +
 
 ##### Catégorie terrains spawn :
 
