@@ -21,14 +21,14 @@ En cas de problème/questions, vous pouvez me contactez sur discord : loicsmith 
 - Commandes administratives par level admin (voir prochaine catégorie)
 - possibilité de changer de prénom / Nom de famille RP
 - possibilité de changer de numéro
-- possibilité de se téléporter à un terrain
-- Service admin complet (quand on passe en service admin, nous devenons invincible)
+~~- possibilité de se téléporter à un terrain~~
+~~- Service admin complet (quand on passe en service admin, nous devenons invincible)~~ intégré nativement au jeu
 - possibilité de définir un level admin / mot de passe admin
 - possibilité de soigner/hydrater/nourrir la personne proche
 - possibilité de donner des points sur le permis ainsi que de donner le permis
 - possibilité de donner des levels / expériences
-- possibilité de changer propriétaire/prix de location/prix du terrain
-- possibilité de déplacer/ranger/réparer/refuel un véhicule
+~~- possibilité de changer propriétaire/prix de location/prix du terrain~~ intégré nativement au jeu
+~~- possibilité de déplacer/ranger/réparer/refuel un véhicule~~ intégré nativement au jeu
 
 ## Notes
 
@@ -36,16 +36,16 @@ Sur toutes les commandes marquées comme "personne proche", si il n'y a personne
 
 ## Commandes
 
-/as : se mettre en service admin
+~~/as : se mettre en service admin~~ intégré nativement au jeu
 /admin : ouvre le menu administratif
 
 ## Touches
 
-² (touche "quote" au dessus de tab) : se mettre en service admin
+~~² (touche "quote" au dessus de tab) : se mettre en service admin~~ intégré nativement au jeu
 
 ## détails des niveaux administrateurs par commande
 
-/as : niveau 1 et +
+~~/as : niveau 1 et +~~ intégré nativement au jeu
 
 /admin : niveau 1 et +
 
@@ -53,7 +53,7 @@ Sur toutes les commandes marquées comme "personne proche", si il n'y a personne
 
 ##### Catégorie globale :
 
-- Prendre/finir son service : niveau 1 et +
+~~- Prendre/finir son service : niveau 1 et +~~ intégré nativement au jeu
 - Rejoindre une entreprise (personne proche) : niveau 1 et +
 - Définir numéro de téléphone : niveau 1 et +
 - Donner permis (personne proche) : niveau 3 et +
@@ -74,15 +74,15 @@ Sur toutes les commandes marquées comme "personne proche", si il n'y a personne
 - Nourrir/Hydrater la personne proche : niveau 1 et +
 - Nourrir/Hydrater la personne proche pour l'éternité : niveau 4 et +
 
-##### Catégorie terrains :
+~~##### Catégorie terrains :~~ intégré nativement au jeu
 
-- Définir nouveau propriétaire : niveau 3 et +
-- Définir prix de vente : Niveau 3 et +
-- définir prix de location : Niveau 3 et +
+~~- Définir nouveau propriétaire : niveau 3 et +~~ intégré nativement au jeu
+~~- Définir prix de vente : Niveau 3 et +~~ intégré nativement au jeu
+~~- définir prix de location : Niveau 3 et +~~ intégré nativement au jeu
 
-##### Catégorie terrains spawn :
+~~##### Catégorie terrains spawn :~~
 
-téléportation terrain : niveau 1 et +
+~~téléportation terrain : niveau 1 et +~~
 
 ##### Catégorie véhicule :
 
