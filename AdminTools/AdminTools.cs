@@ -8,12 +8,10 @@ using Newtonsoft.Json;
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using UnityEngine;
-
 using Life.AreaSystem;
 using Life.InventorySystem;
 using Life.Network.Systems;
@@ -263,7 +261,7 @@ namespace AdminTools
                 {
                     player.ShowPanelUI(new UIPanel("Définir le numéro de téléphone de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Numéro de téléphone...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
-                        if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                        if (player.account.adminLevel >= 1) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
 
                         string num = ui2.inputText;
@@ -286,7 +284,7 @@ namespace AdminTools
                     })));
                 });
                 samenu.AddTabLine("Donner un rang administrateur", (ui) => {
-                    if (player.account.adminLevel <= 9) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                    if (player.account.adminLevel <= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
                     if (closestPlayer != null)
                     {
@@ -302,7 +300,7 @@ namespace AdminTools
                     }; });
 
                 samenu.AddTabLine("Donner un mot de passe administrateur", (ui) => {
-                    if (player.account.adminLevel <= 9) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                    if (player.account.adminLevel <= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
                     if (closestPlayer != null)
                     {
@@ -401,7 +399,7 @@ namespace AdminTools
 
                     });
                     soinsmenu.AddTabLine("Nourrir/hydrater pour l'éternité la personne proche", (ui) => {
-                        if (player.account.adminLevel >= 8) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                        if (player.account.adminLevel >= 4) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
 
                         if (closestPlayer != null)
@@ -426,7 +424,7 @@ namespace AdminTools
                 globalmenu.AddTabLine("Donner point permis", (ui) => {
                     player.ShowPanelUI(new UIPanel("Définir les points du permis : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nombre de points...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
-                        if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                        if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
                         if (closestPlayer != null)
                         {
@@ -447,7 +445,7 @@ namespace AdminTools
                 });
 
                 globalmenu.AddTabLine("Donner permis", (ui) => {
-                    if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                    if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
                     if (closestPlayer != null)
                     {
@@ -468,7 +466,7 @@ namespace AdminTools
                     {
                         player.ShowPanelUI(new UIPanel("Définir le prénom RP de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Prénom RP...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
-                            if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                            if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
                             string num = ui2.inputText;
                             if (closestPlayer == null)
@@ -493,7 +491,7 @@ namespace AdminTools
                     {
                         player.ShowPanelUI(new UIPanel("Définir le nom de famille RP de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nom de famille RP...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
-                            if (player.account.adminLevel >= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                            if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
 
                             string num = ui2.inputText;
                             if (closestPlayer == null)
@@ -516,7 +514,7 @@ namespace AdminTools
                     });
 
                     globalmenu.AddTabLine("Donner Level", (ui) => {
-                        if (player.account.adminLevel == 10) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                        if (player.account.adminLevel == 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                         player.ShowPanelUI(new UIPanel("Définir le niveau : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Niveau...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
                             if (closestPlayer != null)
@@ -538,7 +536,7 @@ namespace AdminTools
                     });
 
                     globalmenu.AddTabLine("Donner XP", (ui) => {
-                        if (player.account.adminLevel == 10) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                        if (player.account.adminLevel == 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                         player.ShowPanelUI(new UIPanel("Définir le nombre d'expérience : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nombre d'expérience...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
                             if (closestPlayer != null)
@@ -562,7 +560,7 @@ namespace AdminTools
 
                     terrainmenu.AddTabLine("Définir nouveau propriétaire", (ui) =>
                 {
-                    if (player.account.adminLevel >= 8) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                    if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     player.ShowPanelUI(new UIPanel("Définir nouveau propriétaire", (UIPanel.PanelType)1).SetInputPlaceholder("ID propriétaire...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
                         int num = int.Parse(ui2.inputText);
@@ -590,7 +588,7 @@ namespace AdminTools
                 });
                 terrainmenu.AddTabLine("Définir prix de vente", (ui) =>
                 {
-                    if (player.account.adminLevel >= 8) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                    if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     player.ShowPanelUI(new UIPanel("Définir prix de vente", (UIPanel.PanelType)1).SetInputPlaceholder("prix de vente...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
                         int num = int.Parse(ui2.inputText);
@@ -614,7 +612,7 @@ namespace AdminTools
                 });
                 terrainmenu.AddTabLine("Définir prix de location", (ui) =>
                 {
-                    if (player.account.adminLevel >= 8) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                    if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     player.ShowPanelUI(new UIPanel("Définir prix de location", (UIPanel.PanelType)1).SetInputPlaceholder("prix de location...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
                         int num = int.Parse(ui2.inputText);
@@ -658,7 +656,6 @@ namespace AdminTools
                         }
                     }
 
-                    
                   
 
                     vehiclesmenu.AddTabLine("Avancer le véhicule", (ui) =>
