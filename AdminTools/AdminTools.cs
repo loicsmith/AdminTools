@@ -38,7 +38,7 @@ namespace AdminTools
 
 
         {
-            SChatCommand schatCommand1 = new SChatCommand("/as", "admin service", "/as", (Action<Player, string[]>)((player, args) =>
+          /*  SChatCommand schatCommand1 = new SChatCommand("/as", "admin service", "/as", (Action<Player, string[]>)((player, args) =>
       {
           if (player.IsAdmin)
           {
@@ -65,7 +65,7 @@ namespace AdminTools
                     }
                   player.setup.CmdAdminSetHealth(player.character.Id, 100);
                   player.setup.CmdAdminSetHunger(player.character.Id, 100);
-                  player.setup.CmdAdminSetThirst(player.character.Id, 100); */
+                  player.setup.CmdAdminSetThirst(player.character.Id, 100); 
                   player.Health = 100;
                   player.Hunger = 100;
                   player.Thirst = 100;
@@ -88,7 +88,7 @@ namespace AdminTools
                      }
                      player.setup.CmdAdminSetHealth(player.character.Id, 9999);
                      player.setup.CmdAdminSetHunger(player.character.Id, 9999);
-                     player.setup.CmdAdminSetThirst(player.character.Id, 9999); */
+                     player.setup.CmdAdminSetThirst(player.character.Id, 9999); 
                   player.Health = 9999;
                   player.Hunger = 9999;
                   player.Thirst = 9999;
@@ -103,7 +103,7 @@ namespace AdminTools
 
           }
       }));
-
+          */
 
 
             SChatCommand schatCommand3 = new SChatCommand("/admin", "Permet d'afficher le menu admin", "/admin", (Action<Player, string[]>)((player, arg) =>
@@ -115,13 +115,13 @@ namespace AdminTools
                 UIPanel globalmenu = new UIPanel("Menu Administratif - GLOBAL", UIPanel.PanelType.Tab);
                 UIPanel samenu = new UIPanel("Menu Administratif - ADMIN", UIPanel.PanelType.Tab);
                 UIPanel soinsmenu = new UIPanel("Menu Administratif - SOINS", UIPanel.PanelType.Tab);
-                UIPanel terrainmenu = new UIPanel("Menu Administratif - TERRAIN", UIPanel.PanelType.Tab);
-                UIPanel spawnterrainmenu = new UIPanel("Menu Administratif - TERRAIN SPAWN", UIPanel.PanelType.Tab);
+               // UIPanel terrainmenu = new UIPanel("Menu Administratif - TERRAIN", UIPanel.PanelType.Tab);
+           //     UIPanel spawnterrainmenu = new UIPanel("Menu Administratif - TERRAIN SPAWN", UIPanel.PanelType.Tab);
                 UIPanel vehiclesmenu = new UIPanel("Menu Administratif - VEHICULES", UIPanel.PanelType.Tab);
                 UIPanel messagemenu = new UIPanel("Menu Administratif - MESSAGE", UIPanel.PanelType.Tab);
 
 
-                    adminmenu.AddTabLine("Prendre/finir son service", (ui) =>
+               /*     adminmenu.AddTabLine("Prendre/finir son service", (ui) =>
                 {
                     if (player.IsAdmin)
                     {
@@ -148,7 +148,7 @@ namespace AdminTools
                               }
                             player.setup.CmdAdminSetHealth(player.character.Id, 100);
                             player.setup.CmdAdminSetHunger(player.character.Id, 100);
-                            player.setup.CmdAdminSetThirst(player.character.Id, 100); */
+                            player.setup.CmdAdminSetThirst(player.character.Id, 100); 
                             player.Health = 100;
                             player.Hunger = 100;
                             player.Thirst = 100;
@@ -171,7 +171,7 @@ namespace AdminTools
                                }
                                player.setup.CmdAdminSetHealth(player.character.Id, 9999);
                                player.setup.CmdAdminSetHunger(player.character.Id, 9999);
-                               player.setup.CmdAdminSetThirst(player.character.Id, 9999); */
+                               player.setup.CmdAdminSetThirst(player.character.Id, 9999); 
                             player.Health = 9999;
                             player.Hunger = 9999;
                             player.Thirst = 9999;
@@ -185,15 +185,15 @@ namespace AdminTools
                         player.SendText("<color=#e8472a>Vous n'êtes pas administrateur.</color>");
 
                     }
-                });
+                }); */
                 Player closestPlayer = player.GetClosestPlayer(true);
 
                 adminmenu.AddTabLine("Menu Global", (ui) => player.ShowPanelUI(globalmenu)); player.ClosePanel(adminmenu);
                 adminmenu.AddTabLine("Menu Administration", (ui) => player.ShowPanelUI(samenu));
                 adminmenu.AddTabLine("Menu Soins", (ui) => player.ShowPanelUI(soinsmenu));
-                adminmenu.AddTabLine("Menu Terrain", (ui) => player.ShowPanelUI(terrainmenu));
+             //   adminmenu.AddTabLine("Menu Terrain", (ui) => player.ShowPanelUI(terrainmenu));
                 adminmenu.AddTabLine("Menu Véhicule", (ui) => player.ShowPanelUI(vehiclesmenu));
-                adminmenu.AddTabLine("Menu TP TERRAIN", (ui) => player.ShowPanelUI(spawnterrainmenu));
+             //   adminmenu.AddTabLine("Menu TP TERRAIN", (ui) => player.ShowPanelUI(spawnterrainmenu));
                 //adminmenu.AddTabLine("Menu MESSAGE ADMIN", (ui) => player.ShowPanelUI(messagemenu));
 
                     globalmenu.AddTabLine("Rejoindre une entreprise", (ui) =>
@@ -261,60 +261,68 @@ namespace AdminTools
                 {
                     player.ShowPanelUI(new UIPanel("Définir le numéro de téléphone de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Numéro de téléphone...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
-                        if (player.account.adminLevel >= 1) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                        if (player.account.adminLevel >= 1)
+                        {
 
 
-                        string num = ui2.inputText;
-                        if (closestPlayer == null)
-                        {
-                            player.character.PhoneNumber = num;
-                            player.Save();
-                            player.SendText("<color=green>Vous disposez désormais du numéro : </color>" + num);
-                            player.ClosePanel(ui2);
+                            string num = ui2.inputText;
+                            if (closestPlayer == null)
+                            {
+                                player.character.PhoneNumber = num;
+                                player.Save();
+                                player.SendText("<color=green>Vous disposez désormais du numéro : </color>" + num);
+                                player.ClosePanel(ui2);
+                            }
+                            else
+                            {
+                                closestPlayer.character.PhoneNumber = num;
+                                closestPlayer.Save();
+                                closestPlayer.SendText("<color=green>Vous disposez désormais du numéro :</color> " + num);
+                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " dispose désormais du numéro : </color>" + num);
+                                player.ClosePanel(ui2);
+                            }
                         }
-                        else
-                        {
-                            closestPlayer.character.PhoneNumber = num;
-                            closestPlayer.Save();
-                            closestPlayer.SendText("<color=green>Vous disposez désormais du numéro :</color> " + num);
-                            player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " dispose désormais du numéro : </color>" + num);
-                            player.ClosePanel(ui2);
-                        }
+                        else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                         player.ClosePanel(ui);
                     })));
                 });
                 samenu.AddTabLine("Donner un rang administrateur", (ui) => {
-                    if (player.account.adminLevel <= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
-
-                    if (closestPlayer != null)
+                    if (player.account.adminLevel <= 5)
                     {
-                        player.ShowPanelUI(new UIPanel(string.Format("Définir rang administrateur de : " + closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Rang administrateur...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
+
+                        if (closestPlayer != null)
                         {
-                            closestPlayer.account.adminLevel = int.Parse(ui2.inputText);
-                            closestPlayer.Save();
-                            player.ClosePanel(ui);
-                            player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " est désormais administrateur de niveau</color> " + ui2.inputText);
-                            closestPlayer.SendText("<color=green>Vous êtes désormais administrateur de niveau </color>" + ui2.inputText);
-                            player.ClosePanel(ui2);
-                        })));
-                    }; });
+                            player.ShowPanelUI(new UIPanel(string.Format("Définir rang administrateur de : " + closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Rang administrateur...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
+                            {
+                                closestPlayer.account.adminLevel = int.Parse(ui2.inputText);
+                                closestPlayer.Save();
+                                player.ClosePanel(ui);
+                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " est désormais administrateur de niveau</color> " + ui2.inputText);
+                                closestPlayer.SendText("<color=green>Vous êtes désormais administrateur de niveau </color>" + ui2.inputText);
+                                player.ClosePanel(ui2);
+                            })));
+                        } else { player.SendText("<color=red> Aucun joueur à proximité</color>"); }
+                    } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                });
 
                 samenu.AddTabLine("Donner un mot de passe administrateur", (ui) => {
-                    if (player.account.adminLevel <= 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
-
-                    if (closestPlayer != null)
+                    if (player.account.adminLevel <= 5)
                     {
-                        player.ShowPanelUI(new UIPanel(string.Format("Définir mot de passe administrateur de : " + closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Mot de passe administrateur...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
+
+                        if (closestPlayer != null)
                         {
-                            closestPlayer.account.adminPin = ui2.inputText;
-                            closestPlayer.Save();
-                            player.ClosePanel(ui2);
-                            player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais le mot de passe </color>" + ui2.inputText);
-                            closestPlayer.SendText("<color=green>Vous disposez désormais du mot de passe </color>" + ui2.inputText);
-                        })));
-                    }
+                            player.ShowPanelUI(new UIPanel(string.Format("Définir mot de passe administrateur de : " + closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Mot de passe administrateur...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
+                            {
+                                closestPlayer.account.adminPin = ui2.inputText;
+                                closestPlayer.Save();
+                                player.ClosePanel(ui2);
+                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais le mot de passe </color>" + ui2.inputText);
+                                closestPlayer.SendText("<color=green>Vous disposez désormais du mot de passe </color>" + ui2.inputText);
+                            })));
+                        } else { player.SendText("<color=red> Aucun joueur à proximité</color>"); }
+                    } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                 });
-                    messagemenu.AddTabLine("Interpeller un joueur", (ui) =>
+                /*    messagemenu.AddTabLine("Interpeller un joueur", (ui) =>
                     {
 
                         if (closestPlayer != null)
@@ -326,7 +334,7 @@ namespace AdminTools
                                 player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " vient d'être interpellé </color>" + ui2.inputText);
                                 closestPlayer.SendText("<color=red>Un administrateur vous interpelle avec le message suivant : </color>" + ui2.inputText);
                             })));
-                        }
+                        } else { player.SendText("<color=red> Aucun joueur à proximité</color>"); }
                     });
 
                     messagemenu.AddTabLine("Admin besoin de vous", (ui) => {
@@ -355,7 +363,7 @@ namespace AdminTools
                             })));
                         }
                     });
-
+                */
 
                     soinsmenu.AddTabLine("Soigner la personne proche", (ui) => {
 
@@ -399,91 +407,99 @@ namespace AdminTools
 
                     });
                     soinsmenu.AddTabLine("Nourrir/hydrater pour l'éternité la personne proche", (ui) => {
-                        if (player.account.adminLevel >= 4) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
-
-
-                        if (closestPlayer != null)
+                        if (player.account.adminLevel >= 4)
                         {
-                            closestPlayer.character.Hunger = 9999;
-                            closestPlayer.character.Thirst = 9999;
-                            player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " vient d'être rassasié pour l'éternité</color>");
-                            closestPlayer.SendText("<color=green>Vous venez d'être rassasié pour l'éternité par un administrateur </color>");
+
+
+                            if (closestPlayer != null)
+                            {
+                                closestPlayer.character.Hunger = 9999;
+                                closestPlayer.character.Thirst = 9999;
+                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " vient d'être rassasié pour l'éternité</color>");
+                                closestPlayer.SendText("<color=green>Vous venez d'être rassasié pour l'éternité par un administrateur </color>");
 
 
 
-                        }
-                        else
-                        {
-                            player.character.Hunger = 9999;
-                            player.character.Thirst = 9999;
-                            player.SendText("<color=green>Vous venez d'être rassasié pour l'éternité</color>");
+                            }
+                            else
+                            {
+                                player.character.Hunger = 9999;
+                                player.character.Thirst = 9999;
+                                player.SendText("<color=green>Vous venez d'être rassasié pour l'éternité</color>");
 
-                           
-                        }
+
+                            }
+                        } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     });
                 globalmenu.AddTabLine("Donner point permis", (ui) => {
                     player.ShowPanelUI(new UIPanel("Définir les points du permis : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nombre de points...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                     {
-                        if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                        if (player.account.adminLevel >= 3)
+                        {
 
-                        if (closestPlayer != null)
-                        {
-                            closestPlayer.character.PermisPoints = int.Parse(ui2.inputText);
-                            closestPlayer.Save();
-                            player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais " + ui2.inputText + " sur le permis B </color>");
-                            closestPlayer.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " sur le permis B</color>");
-                            player.ClosePanel(ui2);
-                        }
-                        else
-                        {
-                            player.character.PermisPoints = int.Parse(ui2.inputText);
-                            player.Save();
-                            player.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " sur le permis B</color>");
-                            player.ClosePanel(ui2);
-                        }
+                            if (closestPlayer != null)
+                            {
+                                closestPlayer.character.PermisPoints = int.Parse(ui2.inputText);
+                                closestPlayer.Save();
+                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais " + ui2.inputText + " sur le permis B </color>");
+                                closestPlayer.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " sur le permis B</color>");
+                                player.ClosePanel(ui2);
+                            }
+                            else
+                            {
+                                player.character.PermisPoints = int.Parse(ui2.inputText);
+                                player.Save();
+                                player.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " sur le permis B</color>");
+                                player.ClosePanel(ui2);
+                            }
+                        } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     })));
                 });
 
                 globalmenu.AddTabLine("Donner permis", (ui) => {
-                    if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
-
-                    if (closestPlayer != null)
+                    if (player.account.adminLevel >= 3)
                     {
-                        closestPlayer.character.PermisB = true;
-                        closestPlayer.Save();
-                        player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais le permis B</color>");
-                        closestPlayer.SendText("<color=green>Vous disposez désormais du permis B</color>");
-                    }
-                    else
-                    {
-                        player.character.PermisB = true;
-                        player.Save();
-                        player.SendText("<color=green>Vous disposez désormais le permis B</color>");
 
-                    }
+                        if (closestPlayer != null)
+                        {
+                            closestPlayer.character.PermisB = true;
+                            closestPlayer.Save();
+                            player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais le permis B</color>");
+                            closestPlayer.SendText("<color=green>Vous disposez désormais du permis B</color>");
+                        }
+                        else
+                        {
+                            player.character.PermisB = true;
+                            player.Save();
+                            player.SendText("<color=green>Vous disposez désormais le permis B</color>");
+
+                        }
+                    } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                 });
                     globalmenu.AddTabLine("Définir prénom RP du joueur", (ui) =>
                     {
                         player.ShowPanelUI(new UIPanel("Définir le prénom RP de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Prénom RP...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
-                            if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                            if (player.account.adminLevel >= 3)
+                            {
 
-                            string num = ui2.inputText;
-                            if (closestPlayer == null)
-                            {
-                                player.character.Firstname = num;
-                                player.Save();
-                                player.SendText("<color=green>Vous disposez désormais du prénom RP : </color>" + num);
-                                player.ClosePanel(ui2);
-                            }
-                            else
-                            {
-                                closestPlayer.character.Firstname = num;
-                                closestPlayer.Save();
-                                closestPlayer.SendText("<color=green>Vous disposez désormais du prénom RP :</color> " + num);
-                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " dispose désormais du prénom RP : </color>" + num);
-                                player.ClosePanel(ui2);
-                            }
+                                string num = ui2.inputText;
+                                if (closestPlayer == null)
+                                {
+                                    player.character.Firstname = num;
+                                    player.Save();
+                                    player.SendText("<color=green>Vous disposez désormais du prénom RP : </color>" + num);
+                                    player.ClosePanel(ui2);
+                                }
+                                else
+                                {
+                                    closestPlayer.character.Firstname = num;
+                                    closestPlayer.Save();
+                                    closestPlayer.SendText("<color=green>Vous disposez désormais du prénom RP :</color> " + num);
+                                    player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " dispose désormais du prénom RP : </color>" + num);
+                                    player.ClosePanel(ui2);
+                                }
+                            } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                             player.ClosePanel(ui);
                         })));
                     });
@@ -491,7 +507,7 @@ namespace AdminTools
                     {
                         player.ShowPanelUI(new UIPanel("Définir le nom de famille RP de : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nom de famille RP...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                         {
-                            if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
+                            if (player.account.adminLevel >= 3) { 
 
                             string num = ui2.inputText;
                             if (closestPlayer == null)
@@ -509,56 +525,61 @@ namespace AdminTools
                                 player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " dispose désormais du nom de famille RP : </color>" + num);
                                 player.ClosePanel(ui2);
                             }
+                        } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                             player.ClosePanel(ui);
                         })));
                     });
 
                     globalmenu.AddTabLine("Donner Level", (ui) => {
-                        if (player.account.adminLevel == 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
-                        player.ShowPanelUI(new UIPanel("Définir le niveau : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Niveau...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
+                        if (player.account.adminLevel == 5)
                         {
-                            if (closestPlayer != null)
+                            player.ShowPanelUI(new UIPanel("Définir le niveau : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Niveau...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                             {
-                                closestPlayer.character.Level = int.Parse(ui2.inputText);
-                                closestPlayer.Save();
-                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais le niveau " + ui2.inputText + " </color>");
-                                closestPlayer.SendText("<color=green>Vous disposez désormais du niveau " + ui2.inputText + " </color>");
-                                player.ClosePanel(ui2);
-                            }
-                            else
-                            {
-                                player.character.Level = int.Parse(ui2.inputText);
-                                player.Save();
-                                player.SendText("<color=green>Vous disposez désormais du niveau " + ui2.inputText + " </color>");
-                                player.ClosePanel(ui2);
-                            }
-                        })));
+                                if (closestPlayer != null)
+                                {
+                                    closestPlayer.character.Level = int.Parse(ui2.inputText);
+                                    closestPlayer.Save();
+                                    player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais le niveau " + ui2.inputText + " </color>");
+                                    closestPlayer.SendText("<color=green>Vous disposez désormais du niveau " + ui2.inputText + " </color>");
+                                    player.ClosePanel(ui2);
+                                }
+                                else
+                                {
+                                    player.character.Level = int.Parse(ui2.inputText);
+                                    player.Save();
+                                    player.SendText("<color=green>Vous disposez désormais du niveau " + ui2.inputText + " </color>");
+                                    player.ClosePanel(ui2);
+                                }
+                            })));
+                        } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     });
 
                     globalmenu.AddTabLine("Donner XP", (ui) => {
-                        if (player.account.adminLevel == 5) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
-                        player.ShowPanelUI(new UIPanel("Définir le nombre d'expérience : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nombre d'expérience...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
+                        if (player.account.adminLevel == 5)
                         {
-                            if (closestPlayer != null)
+                            player.ShowPanelUI(new UIPanel("Définir le nombre d'expérience : " + (closestPlayer == null ? player.GetFullName() : closestPlayer.GetFullName()), (UIPanel.PanelType)1).SetInputPlaceholder("Nombre d'expérience...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
                             {
-                                closestPlayer.character.XP = int.Parse(ui2.inputText);
-                                closestPlayer.Save();
-                                player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais " + ui2.inputText + " d'expérience </color>");
-                                closestPlayer.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " d'expérience</color>");
-                                player.ClosePanel(ui2);
-                            }
-                            else
-                            {
-                                player.character.XP = int.Parse(ui2.inputText);
-                                player.Save();
-                                player.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " d'expérience</color>");
-                                player.ClosePanel(ui2);
-                            }
-                        })));
+                                if (closestPlayer != null)
+                                {
+                                    closestPlayer.character.XP = int.Parse(ui2.inputText);
+                                    closestPlayer.Save();
+                                    player.SendText("<color=green>Le joueur " + closestPlayer.GetFullName() + " possède désormais " + ui2.inputText + " d'expérience </color>");
+                                    closestPlayer.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " d'expérience</color>");
+                                    player.ClosePanel(ui2);
+                                }
+                                else
+                                {
+                                    player.character.XP = int.Parse(ui2.inputText);
+                                    player.Save();
+                                    player.SendText("<color=green>Vous disposez désormais de " + ui2.inputText + " d'expérience</color>");
+                                    player.ClosePanel(ui2);
+                                }
+                            })));
+                        } else { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     });
 
 
-                    terrainmenu.AddTabLine("Définir nouveau propriétaire", (ui) =>
+                /*    terrainmenu.AddTabLine("Définir nouveau propriétaire", (ui) =>
                 {
                     if (player.account.adminLevel >= 3) { player.SendText("<color=red>Vous n'avez pas la permission !</color>"); }
                     player.ShowPanelUI(new UIPanel("Définir nouveau propriétaire", (UIPanel.PanelType)1).SetInputPlaceholder("ID propriétaire...").AddButton("Fermer", (Action<UIPanel>)(ui2 => player.ClosePanel(ui2))).AddButton("Valider", (Action<UIPanel>)(ui2 =>
@@ -642,8 +663,8 @@ namespace AdminTools
                     })));
                 });
 
-                    foreach (var area in Nova.server.areas.areas)
-                    {
+              /*      foreach (var area in Nova.server.areas.areas)
+                    { 
                         LifeArea areatwo = Nova.a.GetAreaById(area.id);
                         if (areatwo.permissions.owner != null)
                         {
@@ -655,7 +676,7 @@ namespace AdminTools
                         });
                         }
                     }
-
+              */
                   
 
                     vehiclesmenu.AddTabLine("Avancer le véhicule", (ui) =>
@@ -823,14 +844,14 @@ namespace AdminTools
                     soinsmenu.AddButton("Fermer", (ui) => { player.ClosePanel(ui); });
                     soinsmenu.AddButton("Sélectionner", (Action<UIPanel>)(ui1 => ui1.SelectTab()));
 
-                    terrainmenu.AddButton("Fermer", (ui) => { player.ClosePanel(ui); });
-                    terrainmenu.AddButton("Sélectionner", (Action<UIPanel>)(ui1 => ui1.SelectTab()));
+                 //   terrainmenu.AddButton("Fermer", (ui) => { player.ClosePanel(ui); });
+                 //   terrainmenu.AddButton("Sélectionner", (Action<UIPanel>)(ui1 => ui1.SelectTab()));
 
                     vehiclesmenu.AddButton("Fermer", (ui) => { player.ClosePanel(ui); });
                     vehiclesmenu.AddButton("Sélectionner", (Action<UIPanel>)(ui1 => ui1.SelectTab()));
 
-                    spawnterrainmenu.AddButton("Fermer", (ui) => { player.ClosePanel(ui); });
-                    spawnterrainmenu.AddButton("Sélectionner", (Action<UIPanel>)(ui1 => ui1.SelectTab()));
+                 //   spawnterrainmenu.AddButton("Fermer", (ui) => { player.ClosePanel(ui); });
+                //    spawnterrainmenu.AddButton("Sélectionner", (Action<UIPanel>)(ui1 => ui1.SelectTab()));
 
                     messagemenu.AddButton("Fermer", (ui) => { player.ClosePanel(ui); });
                     messagemenu.AddButton("Sélectionner", (Action<UIPanel>)(ui1 => ui1.SelectTab()));
@@ -845,11 +866,11 @@ namespace AdminTools
                 else
                     player.SendText("<color=red>Vous n'êtes pas administrateur !</color>");
             }));
-            schatCommand1.Register();
+           // schatCommand1.Register();
             schatCommand3.Register();
         }
 
-        public override void OnPlayerInput(Player player, KeyCode keyCode, bool onUI)
+     /*   public override void OnPlayerInput(Player player, KeyCode keyCode, bool onUI)
         {
             base.OnPlayerInput(player, keyCode, onUI);
 
@@ -868,7 +889,7 @@ namespace AdminTools
                         player.SetAdminService(false);
                         player.SendText(string.Format("<color={0}>Service admin désactivé !</color>", (object)"#e8472a"));
 
-                        /*  if (player.setup.isFlying == false) player.SendText(" ");
+                          if (player.setup.isFlying == false) player.SendText(" ");
                           else
                           {
                               Nova.character.CmdAdminFly();
@@ -880,7 +901,7 @@ namespace AdminTools
                           }
                         player.setup.CmdAdminSetHealth(player.character.Id, 100);
                         player.setup.CmdAdminSetHunger(player.character.Id, 100);
-                        player.setup.CmdAdminSetThirst(player.character.Id, 100); */
+                        player.setup.CmdAdminSetThirst(player.character.Id, 100); 
                         player.Health = 100;
                         player.Hunger = 100;
                         player.Thirst = 100;
@@ -903,7 +924,7 @@ namespace AdminTools
                         }
                         player.setup.CmdAdminSetHealth(player.character.Id, 9999);
                         player.setup.CmdAdminSetHunger(player.character.Id, 9999);
-                        player.setup.CmdAdminSetThirst(player.character.Id, 9999); */
+                        player.setup.CmdAdminSetThirst(player.character.Id, 9999); 
                         player.Health = 9999;
                         player.Hunger = 9999;
                         player.Thirst = 9999;
@@ -923,7 +944,7 @@ namespace AdminTools
             }
           
         
-        }
+        } */
          }
     }
 
