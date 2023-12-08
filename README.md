@@ -12,6 +12,8 @@ En cas de problème/questions, vous pouvez me contactez sur discord : loicsmith 
 1. Télecharger le plugin (le .dll) : https://github.com/loicsmith/AdminTools/releases/tag/AdminTools
 2. Placer le dans votre dossier plugins de votre serveur
 3. Démarrer votre serveur
+4. Après le premier démarrage, un dossier LOGS ainsi qu'un fichier AdminToolslogs.json apparaissent, placez y entre les guillemets, un webhook discord valide
+5. Redémarrer votre serveur
 
 
 
@@ -19,6 +21,7 @@ En cas de problème/questions, vous pouvez me contactez sur discord : loicsmith 
 ## Fonctionalités
 
 - Commandes administratives par level admin (voir prochaine catégorie)
+- Logs de toutes les actions
 - possibilité de changer de prénom / Nom de famille RP
 - possibilité de changer de numéro
 ~~- possibilité de se téléporter à un terrain~~
