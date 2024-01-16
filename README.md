@@ -77,6 +77,7 @@ Sur toutes les commandes marquées comme "personne proche", si il n'y a personne
 - Soigner la personne proche : niveau 1 et +
 - Nourrir/Hydrater la personne proche : niveau 1 et +
 - Nourrir/Hydrater la personne proche pour l'éternité : niveau 4 et +
+- Soigner de la grippe : niveau 1 et +
 
 ~~##### Catégorie terrains :~~ intégré nativement au jeu
 
