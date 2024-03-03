@@ -1,4 +1,4 @@
-<img src="https://media.discordapp.net/attachments/1174014039333031936/1186032577795080323/AdminTools.jpg" width="300"/>
+<img src="https://i.imgur.com/yCe1DVu.jpeg" width="300"/>
 
 # PLUGIN ADMIN TOOLS
 
