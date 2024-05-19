@@ -2,7 +2,7 @@
 
 # PLUGIN ADMIN TOOLS
 
-Plugin de d'administration sur le jeu Nova-Life : Amboise
+Plugin d'administration sur le jeu Nova-Life : Amboise
 
 # Contact
 
